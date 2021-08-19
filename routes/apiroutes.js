@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
+//imports
 
 router.get("/api/notes", (req, res) => {
     fs.readFile("./db/db.json", "utf8", (err, data) => {
@@ -9,15 +10,9 @@ router.get("/api/notes", (req, res) => {
                 throw err;
         }else {
             res.send(data);
-        }
-         // Create array to hold old notes
-            //   const notesArray = JSON.parse(data);
-        // push the new note to this array
-            //   notesArray.push(newNote);
-        // write the new array over the file
-        
-                
+        }                  
 })});
+//GET route for api/notes
 
 router.post("/api/notes", (req, res) => {
     const newNote = req.body;
@@ -42,5 +37,6 @@ router.post("/api/notes", (req, res) => {
             );
         });
 })
+//POST route for api/notes
 
 module.exports = router;
