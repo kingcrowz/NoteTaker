@@ -1,4 +1,5 @@
 # NoteTaker
+
       
 # Description
 This project is designed to create a digital note taker to replace the need for a notebook, with the ability to add, delete, and edit notes as needed.
